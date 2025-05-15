@@ -1,0 +1,49 @@
+<!DOCTYPE html><html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aastha Mehendi Miracles</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Open+Sans&display=swap" rel="stylesheet">
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Aastha Mehendi Miracles</h1>
+    <p>खूबसूरती की एक अद्भुत कला...</p>
+    <select id="themeSelector"></select>
+    <select id="fontSelector"></select>
+    <button onclick="toggleLogin()">एडमिन लॉगिन</button>
+  </header>  <!-- Login Modal -->  <div id="loginModal" style="display:none">
+    <h2>एडमिन लॉगिन</h2>
+    <input type="text" id="username" placeholder="यूज़रनेम" />
+    <input type="password" id="password" placeholder="पासवर्ड" />
+    <button onclick="login()">लॉगिन करें</button>
+  </div>  <!-- Admin Panel -->  <div id="adminPanel" style="display:none">
+    <h2>एडमिन डैशबोर्ड</h2><section>
+  <h3>गैलरी - फोटो जोड़ें / हटाएं</h3>
+  <input type="file" id="galleryUpload" multiple />
+  <div id="gallery" class="image-grid"></div>
+</section>
+
+<section>
+  <h3>गैलरी फीचर्स - बड़े फोटो के लिए</h3>
+  <input type="file" id="featureUpload" multiple />
+  <div id="featureGallery" class="image-grid"></div>
+</section>
+
+<button onclick="saveChanges()">बदलाव सेव करें</button>
+
+  </div>  <!-- Appointment Form -->  <section>
+    <h2>अपॉइंटमेंट बुक करें</h2>
+    <form id="appointmentForm">
+      <input type="text" placeholder="आपका नाम" required />
+      <input type="date" required />
+      <input type="time" required />
+      <button type="submit">बुक करें</button>
+    </form>
+  </section>  <!-- Contact -->  <footer>
+    <p>संपर्क: +91-XXXXXXXXXX</p>
+  </footer>
+</body>
+</html>
